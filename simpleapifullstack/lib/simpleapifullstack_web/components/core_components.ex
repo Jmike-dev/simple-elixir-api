@@ -1,4 +1,4 @@
-defmodule SimpleapiWeb.CoreComponents do
+defmodule SimpleapifullstackWeb.CoreComponents do
   @moduledoc """
   Provides core UI components.
 
@@ -27,7 +27,7 @@ defmodule SimpleapiWeb.CoreComponents do
 
   """
   use Phoenix.Component
-  use Gettext, backend: SimpleapiWeb.Gettext
+  use Gettext, backend: SimpleapifullstackWeb.Gettext
 
   alias Phoenix.LiveView.JS
 
@@ -490,9 +490,9 @@ defmodule SimpleapiWeb.CoreComponents do
     # with our gettext backend as first argument. Translations are
     # available in the errors.po file (as we use the "errors" domain).
     if count = opts[:count] do
-      Gettext.dngettext(SimpleapiWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(SimpleapifullstackWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(SimpleapiWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(SimpleapifullstackWeb.Gettext, "errors", msg, opts)
     end
   end
 

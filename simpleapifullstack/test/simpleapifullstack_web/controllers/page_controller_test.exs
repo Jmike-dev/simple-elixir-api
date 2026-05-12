@@ -1,5 +1,5 @@
-defmodule SimpleapiWeb.PageControllerTest do
-  use SimpleapiWeb.ConnCase
+defmodule SimpleapifullstackWeb.PageControllerTest do
+  use SimpleapifullstackWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")

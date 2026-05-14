@@ -18,7 +18,8 @@ defmodule SimpleAppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    get "/products", ProductController, :index
+    get "/products", ProductController, :allProducts
+    get "/products/:productId", ProductController, :product
   end
 
   # Other scopes may use custom stacks.
